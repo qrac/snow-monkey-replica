@@ -1,0 +1,37 @@
+{
+  "name": "snow-monkey-replica",
+  "description": "A library for replicating Snow Monkey and Gutenberg's CSS in the Jamstack environment.",
+  "version": "0.1.0",
+  "main": "dist/snow-monkey-replica.css",
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/qrac/snow-monkey-replica#readme",
+  "repository": "https://github.com/qrac/snow-monkey-replica",
+  "bugs": "https://github.com/qrac/snow-monkey-replica/issues",
+  "keywords": [],
+  "author": {
+    "name": "Qrac",
+    "url": "https://qrac.jp"
+  },
+  "organization": {
+    "name": "QRANOKO",
+    "url": "https://qranoko.jp"
+  },
+  "scripts": {
+    "temp": "mkdir -p ./temp",
+    "build": "bash ./tasks/build.sh",
+    "clean": "rmtrash ./dist"
+  },
+  "browserslist": [
+    "> 3% in JP",
+    "ie 11",
+    "android 4.4",
+    "last 1 versions"
+  ],
+  "devDependencies": {
+    "clean-css-cli": "^4.3.0",
+    "concat": "^1.0.3",
+    "glob": "^7.1.6",
+    "js-beautify": "^1.11.0",
+    "prettier": "^2.0.5"
+  }
+}
