@@ -1,6 +1,6 @@
 {
   "name": "snow-monkey-replica",
-  "description": "A library for replicating Snow Monkey and Gutenberg's CSS in the Jamstack environment.",
+  "description": "Snow Monkey and Gutenberg's CSS for Jamstack (Nuxt, Next, Gatsby, etc.)",
   "version": "0.2.0",
   "main": "dist/snow-monkey-replica.css",
   "license": "GPL-2.0+",

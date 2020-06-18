@@ -1,8 +1,10 @@
+![Snow Monkey Replica OGP](https://i.gyazo.com/1fb769dee1af5e9344339c9bdf67a95b.png)
+
 # Snow Monkey Replica
 
 ## About
 
-Snow Monkey と Gutenberg の CSS を、Jamstack 環境で擬似的に再現するためのライブラリです。
+Snow Monkey と Gutenberg のスタイリングを、Jamstack フレームワーク（Nuxt・Next・Gatsby など）で擬似的に再現するための CSS ライブラリです。
 
 ## Install
 
@@ -39,6 +41,56 @@ import "snow-monkey-replica/dist/snow-monkey-replica-smb-all.css";
 
 // Snow Monkey Editor
 import "snow-monkey-replica/dist/snow-monkey-replica-sme-app.css";
+```
+
+## Examples
+
+### Nuxt
+
+`nuxt.config.js`
+
+```js
+module.exports = {
+  head: {
+    bodyAttrs: {
+      class: "l-body",
+    },
+  },
+  css: ["snow-monkey-replica"],
+};
+```
+
+`layouts/default.vue`
+
+```html
+<template>
+  <div class="l-container">
+    <div class="l-contents">
+      <div class="c-container">
+        <div class="l-contents__inner">
+          <main class="l-contents__main">
+            <nuxt />
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+```
+
+`pages/posts/detail/index.vue`
+
+```html
+<template>
+  <article class="c-entry">
+    <header class="c-entry__header">
+      <h1 class="c-entry__title" v-html="post.title" />
+    </header>
+    <div class="c-entry__body">
+      <div class="c-entry__content p-entry-content" v-html="post.content" />
+    </div>
+  </article>
+</template>
 ```
 
 ## How To Build
