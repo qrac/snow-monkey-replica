@@ -15,17 +15,30 @@ $ npm i snow-monkey-replica
 React や Vue で必要な CSS を呼び出します。CSS は未圧縮のため、利用側の webpack などで圧縮してください。
 
 ```js
+//----------------------------------------------------
 // すべてのCSSを利用する場合
+//----------------------------------------------------
+
 import "snow-monkey-replica";
 
+//----------------------------------------------------
 // 個別のCSSを利用する場合
-import "snow-monkey-replica/dist/gutenberg/style.css";
-import "snow-monkey-replica/dist/gutenberg/theme.css";
-import "snow-monkey-replica/dist/snow-monkey/style.css";
-import "snow-monkey-replica/dist/snow-monkey/custom-widgets.css";
-import "snow-monkey-replica/dist/snow-monkey-blocks/blocks.css";
-import "snow-monkey-replica/dist/snow-monkey-blocks/all.css";
-import "snow-monkey-replica/dist/snow-monkey-editor/app.css";
+//----------------------------------------------------
+
+// Gutenberg
+import "snow-monkey-replica/dist/snow-monkey-replica-g-style.css";
+import "snow-monkey-replica/dist/snow-monkey-replica-g-theme.css";
+
+// Snow Monkey
+import "snow-monkey-replica/dist/snow-monkey-replica-sm-style.css";
+import "snow-monkey-replica/dist/snow-monkey-replica-sm-custom-widgets.css";
+
+// Snow Monkey Blocks
+import "snow-monkey-replica/dist/snow-monkey-replica-smb-blocks.css";
+import "snow-monkey-replica/dist/snow-monkey-replica-smb-all.css";
+
+// Snow Monkey Editor
+import "snow-monkey-replica/dist/snow-monkey-replica-sme-app.css";
 ```
 
 ## How To Build

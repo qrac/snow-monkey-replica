@@ -1,7 +1,7 @@
 {
   "name": "snow-monkey-replica",
   "description": "A library for replicating Snow Monkey and Gutenberg's CSS in the Jamstack environment.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "dist/snow-monkey-replica.css",
   "license": "GPL-2.0+",
   "homepage": "https://github.com/qrac/snow-monkey-replica#readme",
@@ -18,7 +18,9 @@
   },
   "scripts": {
     "temp": "mkdir -p ./temp",
-    "build": "bash ./tasks/build.sh",
+    "build": "npm run build:webpack && npm run build:beauty",
+    "build:webpack": "webpack --mode=production",
+    "build:beauty": "bash ./tasks/build-beauty.sh",
     "clean": "rmtrash ./dist"
   },
   "browserslist": [
@@ -27,9 +29,13 @@
   ],
   "devDependencies": {
     "clean-css-cli": "^4.3.0",
-    "concat": "^1.0.3",
-    "glob": "^7.1.6",
+    "css-loader": "^3.6.0",
     "js-beautify": "^1.11.0",
-    "prettier": "^2.0.5"
+    "mini-css-extract-plugin": "^0.9.0",
+    "prettier": "^2.0.5",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-import-glob-loader": "^1.6.3"
   }
 }
